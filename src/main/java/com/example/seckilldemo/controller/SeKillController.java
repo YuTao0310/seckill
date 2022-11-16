@@ -196,34 +196,6 @@ public class SeKillController implements InitializingBean {
         SeckillMessage seckillMessag = new SeckillMessage(user, goodsId);
         mqSender.sendSeckillMessage(JsonUtil.object2JsonStr(seckillMessag));
         return RespBean.success(0);
-
-
-
-
-
-
-
-        /*
-//        model.addAttribute("user", user);
-        GoodsVo goodsVo = itGoodsService.findGoodsVobyGoodsId(goodsId);
-        if (goodsVo.getStockCount() < 1) {
-//            model.addAttribute("errmsg", RespBeanEnum.EMPTY_STOCK.getMessage());
-            return RespBean.error(RespBeanEnum.EMPTY_STOCK);
-        }
-        //判断是否重复抢购
-//        TSeckillOrder seckillOrder = itSeckillOrderService.getOne(new QueryWrapper<TSeckillOrder>().eq("user_id", user.getId()).eq("goods_id", goodsId));
-        TSeckillOrder seckillOrder = (TSeckillOrder) redisTemplate.opsForValue().get("order:" + user.getId() + ":" + goodsVo.getId());
-        if (seckillOrder != null) {
-//            model.addAttribute("errmsg", RespBeanEnum.REPEATE_ERROR.getMessage());
-            return RespBean.error(RespBeanEnum.REPEATE_ERROR);
-        }
-        TOrder tOrder = orderService.secKill(user, goodsVo);
-//        model.addAttribute("order", tOrder);
-//        model.addAttribute("goods", goodsVo);
-        return RespBean.success(tOrder);
-
-         */
-
     }
 
     /**

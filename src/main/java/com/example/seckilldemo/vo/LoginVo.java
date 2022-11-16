@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 public class LoginVo {
 
     @NotNull
-//    @IsMobile
+    @IsMobile
     private String mobile;
 
     @NotNull

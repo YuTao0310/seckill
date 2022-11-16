@@ -17,7 +17,7 @@ spring:
         compressed: true
         #启用h5应用缓存，默认禁用
         html-application-cache: true
-      static-locations: classpath:/static/
+        static-locations: classpath:/static/
 
   thymeleaf:
     cache: false

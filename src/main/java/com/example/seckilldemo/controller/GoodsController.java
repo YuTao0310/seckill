@@ -8,12 +8,15 @@ import com.example.seckilldemo.vo.GoodsVo;
 import com.example.seckilldemo.vo.RespBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+
 import org.omg.CORBA.TIMEOUT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +27,8 @@ import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -48,8 +53,21 @@ public class GoodsController {
     @Autowired
     private ThymeleafViewResolver thymeleafViewResolver;
 
+    @GetMapping("/test")
+    @ResponseBody
+    public String test(HttpSession session, Model model, @CookieValue("userTicket") String ticket) {
+        if (StringUtils.isEmpty(ticket)) {
+            return "login";
+            }
+            TUser user = (TUser) session.getAttribute(ticket);
+            if (null == user) {
+            return "login";
+            }
+            model.addAttribute("user", user);
+            return "goodsList";
+    }
 
-    @ApiOperation("商品列表")
+    @ApiOperation("商品列表废弃")
     @RequestMapping(value = "/toList2", produces = "text/html;charset=utf-8", method = RequestMethod.GET)
     @ResponseBody
     public String toList2(Model model, TUser user, HttpServletRequest request, HttpServletResponse response) {
@@ -70,7 +88,7 @@ public class GoodsController {
         return html;
     }
 
-    @ApiOperation("商品详情")
+    @ApiOperation("商品详情废弃-页面缓存")
     @RequestMapping(value = "/goodsDetail2/{goodsId}", produces = "text/html;charset=utf-8", method = RequestMethod.GET)
     @ResponseBody
     public String toDetail2(Model model, TUser user, @PathVariable Long goodsId, HttpServletRequest request, HttpServletResponse response) {

@@ -1,10 +1,5 @@
 package com.example.seckilldemo;
 
-import com.example.seckilldemo.controller.TUserController;
-import com.example.seckilldemo.entity.TUser;
-import com.example.seckilldemo.mapper.TUserMapper;
-import com.example.seckilldemo.service.ITUserService;
-import com.example.seckilldemo.utils.MD5Util;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

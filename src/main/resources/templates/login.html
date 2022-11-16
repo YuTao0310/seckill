@@ -88,7 +88,7 @@
                 if (data.code == 200) {
                     layer.msg("成功");
                     console.log(data);
-                    document.cookie = "userTicket=" + data.object;
+                    document.cookie = "userTicket=" + data.object + ";path=/";
                     window.location.href = "/goods/toList";
                 } else {
                     layer.msg(data.message);

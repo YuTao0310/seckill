@@ -68,7 +68,7 @@ public class TUserServiceImpl extends ServiceImpl<TUserMapper, TUser> implements
         //将用户信息存入redis
         redisTemplate.opsForValue().set("user:" + userTicket, user);
 
-//        request.getSession().setAttribute(userTicket, user);
+    //    request.getSession().setAttribute(userTicket, user);
         CookieUtil.setCookie(request, response, "userTicket", userTicket);
         return RespBean.success(userTicket);
 
