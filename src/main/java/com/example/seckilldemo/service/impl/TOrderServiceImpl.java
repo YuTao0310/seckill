@@ -60,21 +60,23 @@ public class TOrderServiceImpl extends ServiceImpl<TOrderMapper, TOrder> impleme
         ValueOperations valueOperations = redisTemplate.opsForValue();
 
         TSeckillGoods seckillGoods = itSeckillGoodsService.getOne(new QueryWrapper<TSeckillGoods>().eq("goods_id", goodsVo.getId()));
-        seckillGoods.setStockCount(seckillGoods.getStockCount() - 1);
+//        seckillGoods.setStockCount(seckillGoods.getStockCount() - 1);
 //        itSeckillGoodsService.updateById(seckillGoods);
 //        boolean seckillGoodsResult = itSeckillGoodsService.update(new UpdateWrapper<TSeckillGoods>()
 //                .set("stock_count", seckillGoods.getStockCount())
 //                .eq("id", seckillGoods.getId())
 //                .gt("stock_count", 0)
 //        );
+        //原子性操作，保证数据库中的库存数据正常
         boolean seckillGoodsResult = itSeckillGoodsService.update(new UpdateWrapper<TSeckillGoods>()
                 .setSql("stock_count = " + "stock_count-1")
                 .eq("goods_id", goodsVo.getId())
                 .gt("stock_count", 0)
         );
-//        if (!seckillGoodsResult) {
-//            return null;
-//        }
+        //更新失败提前返回
+       if (!seckillGoodsResult) {
+           return null;
+       }
 
         if (seckillGoods.getStockCount() < 1) {
             //判断是否还有库存
@@ -94,7 +96,7 @@ public class TOrderServiceImpl extends ServiceImpl<TOrderMapper, TOrder> impleme
         order.setStatus(0);
         order.setCreateDate(new Date());
         tOrderMapper.insert(order);
-        //生成秒杀订单
+        //生成秒杀订单 对userId、goodsId加了唯一索引，防止重复订单生成
         TSeckillOrder tSeckillOrder = new TSeckillOrder();
         tSeckillOrder.setUserId(user.getId());
         tSeckillOrder.setOrderId(order.getId());

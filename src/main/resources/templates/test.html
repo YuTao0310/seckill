@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <!-- jquery -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- layer -->
+    <script type="text/javascript" src="/layer/layer.js"></script>
+    <!-- common.js -->
+    <script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+
+<div>
+    <span id = "value"></span>
+</div>
+
+<script>
+    $(function () {
+        // countDown();
+        getDetails();
+    });
+
+    function getDetails() {
+        var str = g_getQueryString("str");
+        console.log(str);
+        $.ajax({
+            url: '/demo/postTest2',
+            type: 'POST',
+            data: {
+                "str" : "string"
+            },
+            success: function (data) {
+                if (data.code == 200) {
+                    $("#value").text(data.object)
+                } else {
+                    layer.msg("客户端请求出错");
+                }
+            },
+            error: function () {
+                layer.msg("客户端请求出错");
+            }
+        })
+    }
+</script>

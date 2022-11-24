@@ -158,7 +158,7 @@ public class GoodsController {
     @RequestMapping(value = "/detail/{goodsId}", method = RequestMethod.GET)
     @ResponseBody
     public RespBean toDetail(TUser user, @PathVariable Long goodsId) {
-        ValueOperations valueOperations = redisTemplate.opsForValue();
+ //       ValueOperations valueOperations = redisTemplate.opsForValue();
 //        String html = (String) valueOperations.get("goodsDetail:" + goodsId);
 //        if (!StringUtils.isEmpty(html)) {
 //            return html;

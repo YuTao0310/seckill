@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/order")
 @Api(value = "订单", tags = "订单")
-public class TOrderController {
+public class OrderController {
 
     @Autowired
     private ITOrderService itOrderService;
