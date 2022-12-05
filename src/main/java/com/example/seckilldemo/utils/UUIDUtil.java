@@ -6,7 +6,7 @@ import java.util.UUID;
  * UUID工具类
  *
  * @author: LC
- * @date 2022/3/2 5:46 下午
+ * @date 2022/10/2 5:46 下午
  * @ClassName: UUIDUtil
  */
 public class UUIDUtil {

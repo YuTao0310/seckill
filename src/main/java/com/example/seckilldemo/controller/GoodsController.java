@@ -36,7 +36,7 @@ import java.util.concurrent.TimeUnit;
  * 商品
  *
  * @author: LC
- * @date 2022/3/2 5:56 下午
+ * @date 2022/10/2 5:56 下午
  * @ClassName: GoodsController
  */
 @Controller

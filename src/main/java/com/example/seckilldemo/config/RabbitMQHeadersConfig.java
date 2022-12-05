@@ -14,7 +14,7 @@ import java.util.Map;
  * RabbitMQ配置类-Headers配置类
  *
  * @author: LC
- * @date 2022/3/8 5:39 下午
+ * @date 2022/10/8 5:39 下午
  * @ClassName: RabbitMQHeadersConfig
  */
 //@Configuration

@@ -11,7 +11,7 @@ import java.util.Date;
  * 商品返回对象
  *
  * @author: LC
- * @date 2022/3/3 5:43 下午
+ * @date 2022/10/3 5:43 下午
  * @ClassName: GoodsVo
  */
 @ApiModel("商品返回对象")

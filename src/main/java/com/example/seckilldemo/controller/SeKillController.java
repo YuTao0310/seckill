@@ -44,7 +44,7 @@ import java.util.concurrent.TimeUnit;
  * 秒杀
  *
  * @author: LC
- * @date 2022/3/4 11:34 上午
+ * @date 2022/10/4 11:34 上午
  * @ClassName: SeKillController
  */
 @Slf4j
@@ -97,9 +97,9 @@ public class SeKillController implements InitializingBean {
      * @param goodsId
      * @param captcha
      * @return com.example.seckilldemo.vo.RespBean
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 4:04 下午 2022/3/9
+     * @date 4:04 下午 2022/10/9
      **/
     @ApiOperation("获取秒杀地址")
     @AccessLimit(second = 5, maxCount = 5, needLogin = true)
@@ -136,9 +136,9 @@ public class SeKillController implements InitializingBean {
      * @param tUser
      * @param goodsId
      * @return orderId 成功 ；-1 秒杀失败 ；0 排队中
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 7:04 下午 2022/3/8
+     * @date 7:04 下午 2022/10/8
      **/
     @ApiOperation("获取秒杀结果")
     @GetMapping("getResult")
@@ -159,7 +159,7 @@ public class SeKillController implements InitializingBean {
      * @return java.lang.String
      * @author LC
      * @operation add
-     * @date 11:36 上午 2022/3/4
+     * @date 11:36 上午 2022/10/4
      **/
     @ApiOperation("秒杀功能")
     @RequestMapping(value = "/{path}/doSeckill", method = RequestMethod.POST)
@@ -207,7 +207,7 @@ public class SeKillController implements InitializingBean {
      * @return java.lang.String
      * @author LC
      * @operation add
-     * @date 11:36 上午 2022/3/4
+     * @date 11:36 上午 2022/10/4
      **/
     @ApiOperation("秒杀功能-废弃")
     @RequestMapping(value = "/doSeckill2", method = RequestMethod.POST)
@@ -259,9 +259,9 @@ public class SeKillController implements InitializingBean {
      *
      * @param
      * @return void
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 6:29 下午 2022/3/8
+     * @date 6:29 下午 2022/10/8
      **/
     @Override
     public void afterPropertiesSet() throws Exception {

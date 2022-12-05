@@ -7,7 +7,7 @@ import com.example.seckilldemo.entity.TUser;
 /**
  * 秒杀订单表 服务类
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 public interface ITSeckillOrderService extends IService<TSeckillOrder> {
@@ -18,9 +18,9 @@ public interface ITSeckillOrderService extends IService<TSeckillOrder> {
      * @param tUser
      * @param goodsId
      * @return orderId 成功 ；-1 秒杀失败 ；0 排队中
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 7:07 下午 2022/3/8
+     * @date 7:07 下午 2022/10/8
      **/
     Long getResult(TUser tUser, Long goodsId);
 }

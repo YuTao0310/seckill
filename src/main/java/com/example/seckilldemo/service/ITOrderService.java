@@ -10,7 +10,7 @@ import org.apache.catalina.User;
 /**
  * 服务类
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 public interface ITOrderService extends IService<TOrder> {
@@ -23,7 +23,7 @@ public interface ITOrderService extends IService<TOrder> {
      * @return com.example.seckilldemo.entity.TOrder
      * @author LC
      * @operation add
-     * @date 1:44 下午 2022/3/4
+     * @date 1:44 下午 2022/10/4
      **/
     TOrder secKill(TUser user, GoodsVo goodsVo);
 
@@ -34,7 +34,7 @@ public interface ITOrderService extends IService<TOrder> {
      * @return com.example.seckilldemo.vo.OrderDeatilVo
      * @author LC
      * @operation add
-     * @date 10:21 下午 2022/3/6
+     * @date 10:21 下午 2022/10/6
      **/
     OrderDeatilVo detail(Long orderId);
 
@@ -44,9 +44,9 @@ public interface ITOrderService extends IService<TOrder> {
      * @param user
      * @param goodsId
      * @return java.lang.String
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 2:59 下午 2022/3/9
+     * @date 2:59 下午 2022/10/9
      **/
     String createPath(TUser user, Long goodsId);
 
@@ -57,17 +57,17 @@ public interface ITOrderService extends IService<TOrder> {
      * @param goodsId
      * @param path
      * @return boolean
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 2:59 下午 2022/3/9
+     * @date 2:59 下午 2022/10/9
      **/
     boolean checkPath(TUser user, Long goodsId, String path);
 
     /**
      * 校验验证码
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 3:52 下午 2022/3/9
+     * @date 3:52 下午 2022/10/9
      * @param tuser
      * @param goodsId
      * @param captcha

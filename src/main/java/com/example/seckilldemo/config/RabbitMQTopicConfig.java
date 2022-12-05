@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * RabbitMQ配置类-Topic
  *
  * @author: LC
- * @date 2022/3/8 5:24 下午
+ * @date 2022/10/8 5:24 下午
  * @ClassName: RabbitMQTopicConfig
  */
 @Configuration

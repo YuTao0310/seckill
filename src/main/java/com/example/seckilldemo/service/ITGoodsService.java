@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 商品表 服务类
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 public interface ITGoodsService extends IService<TGoods> {
@@ -21,7 +21,7 @@ public interface ITGoodsService extends IService<TGoods> {
      * @return java.util.List<com.example.seckilldemo.vo.GoodsVo>
      * @author LC
      * @operation add
-     * @date 5:49 下午 2022/3/3
+     * @date 5:49 下午 2022/10/3
      **/
     List<GoodsVo> findGoodsVo();
 
@@ -32,7 +32,7 @@ public interface ITGoodsService extends IService<TGoods> {
      * @return java.lang.String
      * @author LC
      * @operation add
-     * @date 9:37 上午 2022/3/4
+     * @date 9:37 上午 2022/10/4
      **/
     GoodsVo findGoodsVobyGoodsId(Long goodsId);
 }

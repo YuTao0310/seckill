@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author: LC
- * @date 2022/3/9 4:27 下午
+ * @date 2022/10/9 4:27 下午
  * @ClassName: AccessLimitInterceptor
  */
 @Component

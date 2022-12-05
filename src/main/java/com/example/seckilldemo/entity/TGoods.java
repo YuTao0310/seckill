@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 /**
  * 商品表
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 @TableName("t_goods")

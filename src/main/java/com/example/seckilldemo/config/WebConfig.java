@@ -14,7 +14,7 @@ import java.util.List;
  * MVC配置类
  *
  * @author: LC
- * @date 2022/3/3 2:37 下午
+ * @date 2022/10/3 2:37 下午
  * @ClassName: WebConfig
  */
 @Configuration

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 /**
  * 秒杀商品表
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 @TableName("t_seckill_goods")

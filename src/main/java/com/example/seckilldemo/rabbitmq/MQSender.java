@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * 消息发送者
  *
  * @author: LC
- * @date 2022/3/7 7:42 下午
+ * @date 2022/10/7 7:42 下午
  * @ClassName: MQSender
  */
 @Service
@@ -24,9 +24,9 @@ public class MQSender {
 
     /**
      * 发送秒杀信息
-     * @author LiChao
+     * @author YuTao
      * @operation add
-     * @date 6:44 下午 2022/3/8
+     * @date 6:44 下午 2022/10/8
      * @param message
      * @return void
      **/

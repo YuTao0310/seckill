@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * MD5工具类
  *
  * @author: LC
- * @date 2022/3/1 4:45 下午
+ * @date 2022/10/1 4:45 下午
  * @ClassName: MD5Util
  */
 @Component
@@ -26,7 +26,7 @@ public class MD5Util {
      * @return java.lang.String
      * @author LC
      * @operation add
-     * @date 4:49 下午 2022/3/1
+     * @date 4:49 下午 2022/10/1
      **/
     public static String inputPassToFromPass(String inputPass) {
         String str = "" + salt.charAt(0) + salt.charAt(2) + inputPass + salt.charAt(5) + salt.charAt(4);
@@ -37,7 +37,7 @@ public class MD5Util {
      * 第二次加密
      * @author LC
      * @operation add
-     * @date 4:52 下午 2022/3/1
+     * @date 4:52 下午 2022/10/1
      * @param formPass
      * @param salt
      * @return java.lang.String

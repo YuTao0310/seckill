@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * RabbitMQ配置类-Direct模式
  *
  * @author: LC
- * @date 2022/3/8 4:56 下午
+ * @date 2022/10/8 4:56 下午
  * @ClassName: RabbitMQDirectConfig
  */
 //@Configuration

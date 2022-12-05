@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * 秒杀订单表
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-03
  */
 @TableName("t_seckill_order")

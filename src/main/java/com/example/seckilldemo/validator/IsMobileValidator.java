@@ -10,7 +10,7 @@ import javax.validation.ConstraintValidatorContext;
  * 手机号码校验规则
  *
  * @author: LC
- * @date 2022/3/2 3:08 下午
+ * @date 2022/10/2 3:08 下午
  * @ClassName: IsMobileValidator
  */
 public class IsMobileValidator implements ConstraintValidator<IsMobile, String> {

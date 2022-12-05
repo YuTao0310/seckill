@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * 用户表
  *
- * @author LiChao
+ * @author YuTao
  * @since 2022-03-02
  */
 @TableName("t_user")

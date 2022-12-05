@@ -18,7 +18,7 @@ import com.example.seckilldemo.vo.RespBean;
  * 测试类
  *
  * @author: LC
- * @date 2022/3/1 4:22 下午
+ * @date 2022/10/1 4:22 下午
  * @ClassName: DemoController
  */
 @Controller
@@ -33,7 +33,7 @@ public class DemoController {
      * @return java.lang.String
      * @author LC
      * @operation add
-     * @date 4:25 下午 2022/3/1
+     * @date 4:25 下午 2022/10/1
      **/
     @RequestMapping(value = "/hello", method = RequestMethod.PUT)
     public String hello(Model model) {
